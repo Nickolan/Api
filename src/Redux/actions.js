@@ -3,7 +3,7 @@ import { GET_DOGS, GET_TEMPS, ORDER, FILTER_TEMPS, FILTER_ORIGIN, FIND_DOGS, RES
 
 export const getAllDogs = (setisLoading) => {
     return async function (dispatch){
-        let dogsData = await axios.get('http://localhost:3001/dogs')
+        let dogsData = await axios.get('/dogs')
         setisLoading(true)
         return dispatch({type: GET_DOGS, payload: dogsData.data})
     }
@@ -15,7 +15,7 @@ export const reset = () => {
 
 export const getTemperaments = () => {
     return async function (dispatch){
-        let tempsData = await axios.get('http://localhost:3001/temperaments')
+        let tempsData = await axios.get('/temperaments')
         return dispatch({type: GET_TEMPS, payload: tempsData.data})
     }
 }
@@ -34,7 +34,7 @@ export const filterByOrigin = (origin) => {
 
 export const findDogs = (dogName) => {
     return async function (dispatch){
-        let dogs = await axios(`http://localhost:3001/dogs?name=${dogName}`)
+        let dogs = await axios(`/dogs?name=${dogName}`)
         return dispatch({type: FIND_DOGS, payload: dogs.data})
     }
 }

@@ -7,6 +7,8 @@ import Home from './components/Home/Home'
 import Form from './components/Form/Form';
 import sound from './images/ladrido.mp3'
 import backcry from './images/perrocry.mp3'
+import axios from 'axios';
+axios.defaults.baseURL = "https://findyourperrito-server-production.up.railway.app/";
 
 function App() {
 
