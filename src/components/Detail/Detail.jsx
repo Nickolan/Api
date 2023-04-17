@@ -9,7 +9,7 @@ export default function Detail(){
     let { id } = useParams();
     const [dogDetail, setDogDetail] = useState([]);
     const myDetail = async () => {
-        const dogDet = await axios.get('http://localhost:3001/dogs/' + id);
+        const dogDet = await axios.get('/dogs/' + id);
         setDogDetail(dogDet.data);
       }
     useEffect(() => {
@@ -27,7 +27,7 @@ export default function Detail(){
     return (
         <div className={DetailStyle.contain}>
             <button>
-            <Link to={`http://localhost:3000/home`}>Back</Link>
+            <Link to={`https://find-your-perrito-client.vercel.app/home`}>Back</Link>
             </button>
             <h4>DOG: N°{dogDetail.id}</h4>
             <img className={DetailStyle.img} src={dogDetail.image} alt={dogDetail.name} />

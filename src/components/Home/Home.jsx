@@ -83,10 +83,10 @@ export default function Home(){
           <div className={HomeStyle.homeNav}>
             
               <button className={HomeStyle.navButton}>
-                <Link to={`http://localhost:3000/`}><img className={HomeStyle.exitImg} src={icon} alt="" /></Link>
+                <Link to={`https://find-your-perrito-client.vercel.app/`}><img className={HomeStyle.exitImg} src={icon} alt="" /></Link>
               </button>
               <button className={HomeStyle.navButton}>
-                <Link to={'http://localhost:3000/create'}><img className={HomeStyle.create} src={create}/></Link>
+                <Link to={'https://find-your-perrito-client.vercel.app/create'}><img className={HomeStyle.create} src={create}/></Link>
               </button>
               <SearchBar setPaginaActual={setPaginaActual}/> 
           </div>

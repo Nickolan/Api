@@ -85,7 +85,7 @@ export default function Form({back, play}){
             return window.alert('Hay errores en la completacion del formulario, arreglalo para crear tu nuevo perro')
         } 
         event.preventDefault();
-            axios.post('http://localhost:3001/dogs', {
+            axios.post('https://find-your-perrito-client.vercel.app/dogs', {
                 name: dog.name,
                 image: dog.image,
                 height: `${dog.heightMin} - ${dog.heightMax}`,
@@ -99,7 +99,7 @@ export default function Form({back, play}){
     return (
         <div className={formStyle.contain}>
             <button onClick={() => back()} className={formStyle.buttonBack}>
-                <Link to={'http://localhost:3000/home'}><img className={formStyle.exitImg} src={icon} alt="" /></Link>
+                <Link to={'https://find-your-perrito-client.vercel.app/home'}><img className={formStyle.exitImg} src={icon} alt="" /></Link>
                 <h2>Home</h2>
             </button>
 
