@@ -83,10 +83,10 @@ export default function Home(){
           <div className={HomeStyle.homeNav}>
             
               <button className={HomeStyle.navButton}>
-                <Link to={`https://find-your-perrito-client.vercel.app/`}><img className={HomeStyle.exitImg} src={icon} alt="" /></Link>
+                <Link to={`/`}><img className={HomeStyle.exitImg} src={icon} alt="" /></Link>
               </button>
               <button className={HomeStyle.navButton}>
-                <Link to={'https://find-your-perrito-client.vercel.app/create'}><img className={HomeStyle.create} src={create}/></Link>
+                <Link to={'/create'}><img className={HomeStyle.create} src={create}/></Link>
               </button>
               <SearchBar setPaginaActual={setPaginaActual}/> 
           </div>
@@ -119,11 +119,18 @@ export default function Home(){
               </div>
               <button className={HomeStyle.reset}  onClick={handleReset}>Reset</button>
             </div>
-            <button onClick={handlePrev} className={HomeStyle.prev}>--Prev--</button>
+            <div className={HomeStyle.paginate}>
+              {
+                paginaActual !== 1 && <button onClick={handlePrev} className={HomeStyle.prev}>--Prev--</button>
+              }
             <nav className={HomeStyle.page}>
-                {pageNumber.map((number, key) => <div key={key} className={HomeStyle.pageNumbers} onClick={() => paginado(number)}><p >{number}</p></div>)}
+                {pageNumber.map((number, key) => <div key={key} className={HomeStyle.pageNumbers} onClick={() => paginado(number)}>{number}</div>)}
             </nav>
-            <button onClick={handleNext} className={HomeStyle.next}>--Next--</button>
+            {
+              paginaActual !== pageNumber.length && <button onClick={handleNext} className={HomeStyle.next}>--Next--</button>
+            }
+            
+            </div>
             
             {!isLoading ? <img className={HomeStyle.loading} src={loading}/> : <Cards dogs={currentDogs}/>}
         </div>

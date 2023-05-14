@@ -1,11 +1,17 @@
 .contain{
     background: url("../../images/BackGround.png");
     background-size: 100vw;
-    background-attachment: fixed;
-    width: 99vw;
-    height: 98.1vh;
-    border: 10px black solid;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: auto;
+    box-sizing: border-box;
+    border: 5px black solid;
     background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .img{
     width: 25vw;
@@ -16,15 +22,39 @@
 }
 .details{
     background-color: rgb(240, 248, 255);
+    margin-top: 20px;
     background-image: url('../../images/backpath.png');
     background-size: 4em;
     backface-visibility: hidden;
-    margin: 1vw 30vw 0 30vw;
+    width: 30vw;
+    height: 40vh;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     color: black;
     text-shadow: 2px 2px 2px whitesmoke;
     border: 5px solid black;
-    height: 47vh;
-    font-size: 1vw;
+    font-size: 15px;
+}
+.divDet{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.button{
+    background-color: antiquewhite;
+    height: 40px;
+    width: 60px;
+    border-radius: 20%;
+}
+.button:hover{
+    cursor: pointer;
+}
+.link{
+    text-decoration: none;
+    display: flex;
+    color: black;
+    flex-direction: column;
 }

@@ -2,9 +2,11 @@
     background: url("../../images/BackGround.png");
     background-size: 100vw;
     background-attachment: fixed;
-    width: 99vw;
-    height: 98.1vh;
-    border: 10px black solid;
+    height: 100vh;
+    border: 5px black solid;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     background-repeat: no-repeat;
     display: flex;
     justify-content: space-around;

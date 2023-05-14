@@ -5,21 +5,33 @@
 
     background-size: 100vw;
     background-attachment: fixed;
-    width: 99vw;
-    height: 98.1vh;
-    border: 10px black solid;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    height: 100vh;
+    border: 5px black solid;
     background-repeat: no-repeat;
 }
 .page{
     border: 5px solid black;
     display: inline-flex;
     flex-direction: row;
+    justify-content: center;
+    height: 5vh;
     margin: 15px 0px 20px 0px;
+}
+.paginate{
+    height: 8vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 .pageNumbers{
     position: relative;
-    height: 70px;
-    width: 30px;
+    height: 30px;
+    width: 40px;
     font-size: 20px;
     margin: 5px 6px 5px 6px;
     border: 2px solid #000;
@@ -65,7 +77,7 @@
 }
 .homeNav{
     display: flex;
-    border-bottom: 5px solid rgb(0, 0, 0);
+    border-bottom: 1px solid rgb(0, 0, 0);
     justify-content: space-between;
     height: 10vh;
     align-items: center;

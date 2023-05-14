@@ -1,9 +1,10 @@
 .content{
     background: url("../../images/BackGround.png"); 
-    background-size: 100vw;
-    background-attachment: fixed;
-    width: 99vw;
-    height: 98vh;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: auto;
+    box-sizing: border-box;
     border: 10px black solid;
     background-repeat: no-repeat;
 }
@@ -12,7 +13,7 @@
     border: none;
 }
 .buttonImg{
-    transition: transform .2s;
+    transition: transform 1s;
     width: 40%;
 }
 .buttonImg:hover{
